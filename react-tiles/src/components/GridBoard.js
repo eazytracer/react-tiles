@@ -11,7 +11,7 @@ export default function GridBoard(props) {
     for (let row = 0; row < props.rows; row ++) {
         grid.push([])
         for (let col = 0; col < props.cols; col ++) {
-            grid[row].push(<GridSquare key={`${col}${row}`} color="0" />)
+            grid[row].push(<GridSquare key={`${col}-${row}`} row={row} col={col} />)
         }
     }
 

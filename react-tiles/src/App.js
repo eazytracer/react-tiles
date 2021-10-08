@@ -3,7 +3,7 @@ import './App.css';
 
 import GridBoard from './components/GridBoard'
 
-const [rows, cols] = [20, 20];
+const [rows, cols] = [10, 10];
 
 let setStartWidth = (rows, cols) => {
     document.documentElement.style.setProperty('--rows', rows);
