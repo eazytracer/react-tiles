@@ -9,5 +9,5 @@ export default function GridSquare(props) {
     setActive(!isActive);
   };
 
-  return <div className={`grid ${isActive ? "selected" : "unselected"}`} onClick={toggleSelection} />
+  return <div className={`grid-square ${isActive ? "selected" : "unselected"}`} onClick={toggleSelection} />
 }
