@@ -8,9 +8,9 @@ export default function GridBoard(props) {
   // generates an array of 18 rows, each containing 10 GridSquares.
 
     const grid = []
-    for (let row = 0; row < 18; row ++) {
+    for (let row = 0; row < props.rows; row ++) {
         grid.push([])
-        for (let col = 0; col < 10; col ++) {
+        for (let col = 0; col < props.cols; col ++) {
             grid[row].push(<GridSquare key={`${col}${row}`} color="0" />)
         }
     }

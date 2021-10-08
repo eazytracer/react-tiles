@@ -3,15 +3,21 @@ import './App.css';
 
 import GridBoard from './components/GridBoard'
 
+const [rows, cols] = [20, 20];
+
+let setStartWidth = (rows, cols) => {
+    document.documentElement.style.setProperty('--rows', rows);
+    document.documentElement.style.setProperty('--cols', cols);
+
+}
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Tetris Redux</h1>
-      </header>
-      <GridBoard />
-    </div>
-  );
+    setStartWidth(rows, cols);
+    return (
+        <div className="App">
+            <GridBoard rows={rows} cols={cols}/>
+        </div>
+    );
 }
 
 export default App;
